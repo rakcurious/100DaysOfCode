@@ -1,0 +1,3 @@
+Learnt about the core structure of HTML. 
+Learnt about the head tag and other important tags in it and how these tags play a role in SEO. 
+Learnt about heading and paragraph tags and many styling tags like pre, sub, sup etc. also got into lists and list tags and all the common attributes inside all these tags.
