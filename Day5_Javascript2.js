@@ -4,4 +4,4 @@ const Day5_of_100DaysOfCode = () => {
     //Sources: Chai aur Code on YouTube, mdn web docs
 }
 
-Day5_of_100DaysOfCode()
+console.log(Day5_of_100DaysOfCode())
