@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guesser</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body >
+    <h1>Number Guesser</h1><br/>
+    <h2>Guess the hidden number between 1 and 100 to win!</h2>
+    <h3>Enter a number and click on Go. Keep guessing until you win or run out of guesses</h3><br/>
+
+    <form action="submit">
+        <input type="text" name="inputnumber" id="inputbox" class="inputbox"></input>
+        <input type="submit" value="Go" id="submit" class="inputbtn"></input>
+    </form>
+    <div>
+        <p id="message"></p>
+        <h2>Remaining Guesses: <span id="remguess"></span></h2> 
+        <h2>Previous Guesses: <span id="prevguess"></span></h2>
+    </div>
+   
+    <button id="newgame">New Game</button>
+
+
+ <script src="index.js"></script>   
+</body>
+</html>

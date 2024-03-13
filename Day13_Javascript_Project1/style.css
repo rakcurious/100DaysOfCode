@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #351d5c;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1, h2, h3, form{
+    text-align: center;
+}
+
+.inputbtn, .inputbox{
+text-align: center;
+height: 4rem;
+width: 4rem;
+font-size:xx-large;
+margin: 1rem;
+display: inline-block;
+background-color:rgb(116, 97, 170);
+border-radius: 20%;
+border: #351d5c solid ;
+}
+
+button{
+
+text-align: center;
+height: 4rem;
+width: 12rem;
+font-size:x-large;
+margin: 1rem;
+display: inline-block;
+background-color:rgb(140, 36, 201);
+border-radius: 20px;
+border: #351d5c solid ;
+}
+
