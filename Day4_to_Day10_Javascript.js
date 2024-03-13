@@ -10,7 +10,7 @@ function Day4_to_Day10_of_100DaysOfCode () {
 
         Day 8: Learnt about Callback hell, Promises, Chaining and Error Handling. Also learnt about how browser helps Javascript with its Web APIs and how JS Engine and browser work together behind the scenes. \n
 
-        Day 9: Learnt about async await, API requests, fetch, prototype, class constructor, getters and setters etc. \n
+        Day 9: Learnt about async await, API requests, fetch, prototype, class constructor, getter and setter etc. \n
 
         Day 10: Practiced Loop and forEach method etc. \n
 
