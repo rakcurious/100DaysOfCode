@@ -1,15 +1,15 @@
 randomNumber = parseInt(Math.random() * 100 + 1);
 
-input = document.getElementById("inputbox");
-go = document.getElementById("submit");
-newgame = document.getElementById("newgame");
-msg = document.getElementById("message");
-remGuess = document.getElementById("remguess");
-prevGuess = document.getElementById("prevguess");
+const input = document.getElementById("inputbox");
+const go = document.getElementById("submit");
+const newgame = document.getElementById("newgame");
+const msg = document.getElementById("message");
+const remGuess = document.getElementById("remguess");
+const prevGuess = document.getElementById("prevguess");
 
 let guessArr = [];
 let game = true;
-let guessNum = 1;
+let guessNum = 0;
 
 if (game) {
   go.addEventListener("click", function (e) {
@@ -24,7 +24,7 @@ function validateGuess(guess) {
     alert("Please enter a valid number between 1 and 100");
   } else {
     guessArr.push(guess);
-    if (guessNum >= 10) {
+    if (guessNum >= 9) {
       displayGuess(guess);
       displayMessage(`Game Over. Random number was ${randomNumber}`);
       endGame();
@@ -50,7 +50,7 @@ function displayGuess(guess) {
   input.value = "";
   prevGuess.innerHTML += `${guess}, `;
   guessNum++;
-  remGuess.innerHTML = `${11 - guessNum} `;
+  remGuess.innerHTML = `${10 - guessNum} `;
 }
 
 function displayMessage(message) {
