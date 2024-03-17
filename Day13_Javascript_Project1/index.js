@@ -1,4 +1,4 @@
-randomNumber = parseInt(Math.random() * 100 + 1);
+let randomNumber = parseInt(Math.random() * 100 + 1);
 
 const input = document.getElementById("inputbox");
 const go = document.getElementById("submit");
