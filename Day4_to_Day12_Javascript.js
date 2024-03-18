@@ -1,4 +1,4 @@
-function Day4_to_Day10_of_100DaysOfCode () {
+function Day4_to_Day12_of_100DaysOfCode () {
     return (
         `Day 4: Started Learning Javascript. Learnt About Variables, Functions, Execution Context, Call Stack, Hoisting, Lexical Environment, Scope and Scope Chain etc. \n
 
@@ -23,5 +23,5 @@ function Day4_to_Day10_of_100DaysOfCode () {
 
 }
 
-console.log(Day4_to_Day10_of_100DaysOfCode())
+console.log(Day4_to_Day12_of_100DaysOfCode())
 
