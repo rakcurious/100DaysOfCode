@@ -12,7 +12,7 @@ function App() {
     let pass = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
     if (numbers) {
-      pass += "01234567890";
+      pass += "0123456789";
     }
     if (chars) {
       pass += "~!@#$%^&*_-+=?";
