@@ -11,13 +11,13 @@ function App() {
           }
   return (
     <>
-      <h1>yo mr white</h1>
-
-      <h1>Counter</h1>
-      <br />
-      <button onClick={minus}>-</button>
-      <h1>Value: {counter}</h1>
-      <button onClick={plus}>+</button>
+      <div className="flex justify-center items-center flex-col font-mono font-bold">
+      <h1 className="text-xl font-bold m-3">Counter</h1>
+      <div className="text-center p-2 flex justify-center items-center bg-slate-500 rounded-lg h-10 w-10" onClick={minus}><p className="text-xl">-</p></div>
+      <h1 className="text-xl m-2">Value: {counter}</h1>
+      <div className="text-center p-2 flex justify-center items-center bg-slate-500 rounded-lg h-10 w-10" onClick={plus}><p className="text-xl">+</p></div>
+      </div>
+      
     </>
   )
 }
