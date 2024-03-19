@@ -15,8 +15,8 @@ function Home() {
   const swap = () => {
     setFrom(to);
     setTo(from);
-    setConvertedAmount(amount);
     setAmount(convertedAmount);
+    setConvertedAmount(0);
   };
 
   const convert = () => {
@@ -58,6 +58,7 @@ function Home() {
             currencyOptions={options}
             onCurrencyChange={(currency) => setTo(currency)}
             selectCurrency={to}
+            amountDisable="true"
             onAmountChange={(convertedAmount) =>
               setConvertedAmount(convertedAmount)
             }
