@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
 import CurrencyConverter from './CurrencyConverter';
 import useCurrencyInfo from '../hooks/useCurrencyInfo';
 
