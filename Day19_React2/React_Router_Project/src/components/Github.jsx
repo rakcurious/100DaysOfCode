@@ -1,24 +1,67 @@
+import { useEffect, useState } from "react";
+
 export default function Github() {
-    return (
-      <div className="bg-white my-auto py-auto sm:py-auto font-quicksand">
-        <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
-                  <div className="max-w-2xl">
-                    <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Github details</h2>
-                    <p className="mt-6 text-lg leading-8 ">
-                      Here is our CTO's github profile fetched by github api. you can see all the gradients he used to make our site.
-                    </p>
-                  </div>
-                  <div className="flex justify-center items-center gap-x-8">
-                  <img className="object-cover  h-48 w-48 rounded-full" src='https://images.pexels.com/photos/1321913/pexels-photo-1321913.jpeg?auto=compress&cs=tinysrgb&w=600' alt="" />
-                          <div className="flex flex-col gap-1">
-                            <h1 className="text-3xl font-semibold leading-7 tracking-tight mb-1" >Devin </h1>
-                            <p className="text-lg font-semibold leading-6 text-gray-900">4 followers</p>
-                            <p className="text-lg font-semibold leading-6 text-gray-900">12 Reposetaries</p>
-                            <p className="text-lg font-semibold leading-6 text-blue-900 cursor-pointer">Profile link</p>
-                          </div>
-                  </div>
-            </div>
+  const [data, setData] = useState([]);
+  const [username, setUsername] = useState("rakcurious");
+  const [user, setUser] = useState("");
+
+  useEffect(() => {
+    fetch(`https://api.github.com/users/${username}`)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setData(data);
+      });
+  }, [username]);
+  return (
+    <div className="bg-white my-auto flex lg:px-20 py-auto sm:py-10 font-quicksand flex-grow">
+      <div className="w-1/2 h-auto ">
+        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          Github details
+        </h2>
+        <p className="mt-6 text-lg leading-8 ">
+          Enter a github username to see detailed github profile
+        </p>
+        <input
+          value={user}
+          onChange={(e) => setUser(e.target.value)}
+          onKeyDown={(e) => (e.key == "Enter" ? setUsername(user) : null)}
+          autoFocus
+          className="bg-blue-600/50 h-14 w-1/2 my-4 mr-4 outline-2 px-3 outline-black font-bold text-xl rounded-2xl"
+        ></input>
+
+        <button
+          onClick={() => setUsername(user)}
+          className="bg-gradient-to-r from-cyan-800/60 to-purple-800/60 h-14 w-1/2 my-4 mr-4 px-3 font-bold text-xl rounded-2xl text-black"
+        >
+          Get Github Details
+        </button>
       </div>
-    )
-  }
-  
+      <div className="flex justify-center items-center gap-x-8">
+        <img
+          className="object-cover  h-48 w-48 rounded-full"
+          src={data.avatar_url}
+          alt=""
+        />
+        <div className="flex flex-col gap-1">
+          <h1 className="text-3xl font-semibold leading-7 tracking-tight mb-1">
+            {data.name}{" "}
+          </h1>
+          <p className="text-lg font-semibold leading-6 text-gray-900">
+            Bio: {data.bio}
+          </p>
+          <p className="text-lg font-semibold leading-6 text-gray-900">
+            {data.public_repos} Public Repositories
+          </p>
+          <a
+            target="_blank"
+            href={data.html_url}
+            className="text-lg underline font-semibold leading-6 text-blue-900 cursor-pointer"
+          >
+            Profile link
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
