@@ -66,7 +66,7 @@ const Header = () => {
                   } tracking-wide  transition-colors duration-200 hover:text-teal-accent-400`
                 }
               >
-                About Us
+                About
               </NavLink>
             </li>
           </ul>
