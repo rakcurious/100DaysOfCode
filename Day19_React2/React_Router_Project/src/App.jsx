@@ -1,13 +1,19 @@
-
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import About from "./components/About";
+import Github from "./components/Github";
 
 function App() {
-
   return (
     <>
-      <h1 className="font-light font-crypto  text-5xl text-violet-300 text-center m-4">Gm Crypto Bros
-</h1>
+      <div className="min-h-screen flex flex-col">
+        <Header />
+        <Home />
+        <Footer />
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

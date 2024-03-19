@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        crypto: ['Red Rose', 'sans-serif']
+        crypto: ['Red Rose', 'sans-serif'],
+        quicksand: ['Quicksand', 'sans-serif'],
       }
     },
   },
