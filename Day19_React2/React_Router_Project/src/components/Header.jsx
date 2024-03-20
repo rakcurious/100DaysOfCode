@@ -1,7 +1,8 @@
 
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useParams } from "react-router-dom";
 
 const Header = () => {
+  const {username} = useParams()
   
   return (
     <div className="bg-gradient-to-r from-cyan-800/60 to-purple-800/60   font-quicksand  font-medium text-black">
@@ -43,7 +44,7 @@ const Header = () => {
               </NavLink>
             </li>
             <li>
-            <NavLink to={`/github`}
+            <NavLink to={`/github/${username}`}
                 className={({ isActive }) =>
                   ` ${
                     isActive

@@ -58,7 +58,7 @@ function Home() {
             currencyOptions={options}
             onCurrencyChange={(currency) => setTo(currency)}
             selectCurrency={to}
-            amountDisable="true"
+            amountDisable={true}
             onAmountChange={(convertedAmount) =>
               setConvertedAmount(convertedAmount)
             }

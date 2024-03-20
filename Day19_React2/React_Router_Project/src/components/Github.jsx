@@ -1,18 +1,24 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Github() {
   const [data, setData] = useState([]);
   const [username, setUsername] = useState("rakcurious");
   const [user, setUser] = useState("");
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     fetch(`https://api.github.com/users/${username}`)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setData(data);
+        navigate(`/github/${username}`);
       });
   }, [username]);
+
+  
+
   return (
     <div className="bg-white my-auto flex lg:px-20 py-auto sm:py-10 font-quicksand flex-grow">
       <div className="w-1/2 h-auto ">
